@@ -1,0 +1,11 @@
+# never add node_modules
+node_modules
+
+# don't push build files
+dist
+
+# don't push any .env files
+*.env
+
+# next.js build output
+.next
