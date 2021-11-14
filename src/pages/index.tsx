@@ -1,12 +1,12 @@
-import {ThemeProvider, useTheme} from "react-jss";
+import {useTheme} from "react-jss";
 
 const ExamplePage: React.FC = (props) => {
     const theme = useTheme();
-    console.log('My Theme', theme);
     return (
         <main>
-            <title>Fuck TSA</title>
-            <header >Hello fuckers</header>
+            <title>Example Page</title>
+            <header>Current theme styles are as follow:</header>
+            <code>{JSON.stringify(theme || '{}', null, 4)}</code>
         </main>
     )
 };

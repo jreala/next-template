@@ -47,7 +47,7 @@ const ExamplePage: React.FC<ExampleProps> = (props) => {
 
     return (
         <main>
-            <title>Fuck TSA</title>
+            <title>Example Page</title>
             <header className={classes.header}>TSA hates cats</header>
             <img src={`https://cataas.com${props.post.url}`}></img>
         </main>

@@ -1,5 +1,3 @@
-import {createUseStyles, } from 'react-jss';
-
 export type ThemeClasses = "colors" | "spacing";
 
 export const theme: Theme = {
