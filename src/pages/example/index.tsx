@@ -1,4 +1,6 @@
 import {GetStaticProps} from 'next';
+import {createUseStyles, useTheme} from 'react-jss';
+import {Theme} from '@/theme';
 
 interface CatAAS {
     id: string;
@@ -10,6 +12,16 @@ interface CatAAS {
 interface ExampleProps {
     post: CatAAS;
 }
+
+
+export type ClassNames = 'header';
+
+const useStyles = createUseStyles<ClassNames, ExampleProps, Theme>((theme) => ({
+    header: {
+        // backgroundColor: theme.colors.brand,
+    }
+}));
+
 
 // Gets called at build time.
 export const getStaticProps = async () => {
@@ -27,11 +39,17 @@ export const getStaticProps = async () => {
 };
 
 
-const ExamplePage = ({post}: ExampleProps) => {
+const ExamplePage: React.FC<ExampleProps> = (props) => {
+    const theme = useTheme<Theme>();
+    console.log('themeee', theme);
+
+    const classes = useStyles({...props, theme})
+
     return (
         <main>
-            <header>Welcome to your example page. Here's a kitty</header>
-            <img src={`https://cataas.com${post.url}`}></img>
+            <title>Fuck TSA</title>
+            <header className={classes.header}>TSA hates cats</header>
+            <img src={`https://cataas.com${props.post.url}`}></img>
         </main>
     )
 };
