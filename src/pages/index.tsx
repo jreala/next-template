@@ -1,13 +1,10 @@
-import {useTheme} from "react-jss";
+import React from 'react';
 
 const ExamplePage: React.FC = (props) => {
-    const theme = useTheme();
     return (
-        <main>
-            <title>Example Page</title>
-            <header>Current theme styles are as follow:</header>
-            <code>{JSON.stringify(theme || '{}', null, 4)}</code>
-        </main>
+        <div className="text-3xl font-bold underline">
+            <p>hello world</p>
+        </div>
     )
 };
 

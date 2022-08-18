@@ -12,20 +12,12 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "@/theme": [
-        "src/theme"
-      ],
-      "@/theme/*": [
-        "src/theme/*"
-      ]
-    },
     "incremental": true
   },
   "include": [

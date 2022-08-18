@@ -1,4 +1,4 @@
-FROM node:15.14.0-alpine3.10 as builder
+FROM node:18-alpine as builder
 
 # Skip husky on docker image
 ENV HUSKY_SKIP_INSTALL=1
@@ -10,7 +10,7 @@ COPY package.json package-lock.json ${RUNDIR}
 RUN npm ci
 
 ####################
-FROM node:15.14.0-alpine3.10 as base
+FROM node:18-alpine as base
 
 RUN apk add --no-cache bash
 
