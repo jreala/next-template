@@ -5,6 +5,6 @@ services:
       target: localdev
     container_name: examplecontainer
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - ./:/app:rw
