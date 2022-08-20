@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+
+# next.js build output
+.next
+
+# typescript build info
+tsconfig.tsbuildinfo

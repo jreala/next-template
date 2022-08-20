@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-input.flat-input[type=file]::-webkit-file-upload-button,
-input.flat-input[type=file]::file-selector-button {
-    @apply 
-    text-white
+input.flat-input[type='file']::-webkit-file-upload-button,
+input.flat-input[type='file']::file-selector-button {
+  @apply text-white
     bg-blue-700
     hover:bg-blue-600
     font-medium
@@ -16,6 +15,6 @@ input.flat-input[type=file]::file-selector-button {
     pl-8
     pr-4
     p-8;
-    margin-inline-start: -1rem;
-    margin-inline-end: 1rem;
+  margin-inline-start: -1rem;
+  margin-inline-end: 1rem;
 }
