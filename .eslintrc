@@ -1,9 +1,6 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "sourceType": "module"
-    },
     "env": {
         "es6": true,
         "node": true
@@ -13,6 +10,7 @@
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
     ]
 }
