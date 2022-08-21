@@ -9,9 +9,13 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   // Add more setup options before each test is run
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '~/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '~/styles/(.*)$': '<rootDir>/src/styles/$1',
+  },
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
-  moduleDirectories: ['node_modules', '<rootDir>/'],
+  moduleDirectories: ['node_modules', '<rootDir>/', __dirname, 'src', 'src/__tests__'],
   testEnvironment: 'jest-environment-jsdom',
 }
 
